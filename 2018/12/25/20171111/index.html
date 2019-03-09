@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      备忘录 | Algebraic Topology 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Levi Wu">
+    
+    
+
+    <meta name="description" content="MATH6001　代数拓扑基础  Algebraic Topology: An Introduction 系统学习奇异同调与上同调理论。  教学内容：1、同调理论的定义与基本性质；2、一些中间的同调群的计算及应用；3、cw复列的同调；4、任意系数群的同调；5、乘积中间的同调；6、上同调理论；7、同调与上同调中的积。  基本要求：1、弄清同调与上同调理论中的一些基本概念；2、学会计算同调与上同调的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="备忘录 | Algebraic Topology">
+<meta property="og:url" content="http://yoursite.com/2018/12/25/20171111/index.html">
+<meta property="og:site_name" content="Algebraic Topology">
+<meta property="og:description" content="MATH6001　代数拓扑基础  Algebraic Topology: An Introduction 系统学习奇异同调与上同调理论。  教学内容：1、同调理论的定义与基本性质；2、一些中间的同调群的计算及应用；3、cw复列的同调；4、任意系数群的同调；5、乘积中间的同调；6、上同调理论；7、同调与上同调中的积。  基本要求：1、弄清同调与上同调理论中的一些基本概念；2、学会计算同调与上同调的">
+<meta property="og:updated_time" content="2017-11-11T13:44:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="备忘录 | Algebraic Topology">
+<meta name="twitter:description" content="MATH6001　代数拓扑基础  Algebraic Topology: An Introduction 系统学习奇异同调与上同调理论。  教学内容：1、同调理论的定义与基本性质；2、一些中间的同调群的计算及应用；3、cw复列的同调；4、任意系数群的同调；5、乘积中间的同调；6、上同调理论；7、同调与上同调中的积。  基本要求：1、弄清同调与上同调理论中的一些基本概念；2、学会计算同调与上同调的">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Algebraic Topology</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          from nju
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Index</a></li>
+              
+                
+                <li class="navigation__item"><a href="/smallcover" title="" class="">Small Cover</a></li>
+              
+                
+                <li class="navigation__item"><a href="/blog" title="" class="">Levi Wu&#39;blog</a></li>
+              
+                
+                <li class="navigation__item"><a href="/wulisu" title="" class="">WLS 的博客</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">Archive</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">备忘录</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-12-25" class="post-meta__date date">2018-12-25</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <ul>
+<li><p>MATH6001　代数拓扑基础</p>
+<ul>
+<li>Algebraic Topology: An Introduction</li>
+<li><p>系统学习奇异同调与上同调理论。</p>
+</li>
+<li><p>教学内容：1、同调理论的定义与基本性质；2、一些中间的同调群的计算及应用；3、cw复列的同调；4、任意系数群的同调；5、乘积中间的同调；6、上同调理论；7、同调与上同调中的积。</p>
+</li>
+<li><p>基本要求：1、弄清同调与上同调理论中的一些基本概念；2、学会计算同调与上同调的一些基本方法；3、计算一些简单拓扑中间的同调与上同调群。</p>
+</li>
+<li><p>教材及主要参考书目、文献与资料</p>
+</li>
+<li>李元熹、张国樑,《拓扑学》；</li>
+<li>Willian S. Massey, Algebraic Topology; An introduction;</li>
+<li>Willian S. Massey, Singular Homology Theory;</li>
+<li>B. A. Dubrown, A. T. Fomenko, S. P. Norikov, Modern Geonetry-Methods and Applications PartⅡ Introduction to Homology Theory.</li>
+</ul>
+</li>
+</ul>
+<p>MATH6027　代数拓扑<br>Algebraic Topology<br>开课院系：数学研究所 　 　任课教师：东瑜昕教授<br>开课学期：第二 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：基础数学<br>本课程的教学目的<br>通过微分形式系统学习流形上的上同调理论。<br>教学内容及基本要求<br>教学内容：De Rham理论；Cěch –de Rham复形；谱序列与应用。基本要求：掌握de Rham上同调理论与Poincaré对偶；掌握Cěch –de Rham上同调理论；学会用谱序列来分析问题。<br>考核方式及要求<br>考试。闭卷。<br>学习本课程的前期课程要求<br>交集拓扑学、代数学基础、流形基础、代数拓扑学基础。<br>教材及主要参考书目、文献与资料<br>李元熹、张国梁，《拓扑学》<br>Raoul Bott Loring W. Tu, Differential Forms in Algebraic Topology<br>Warner F. W., Foundations of Differential Manifolds and Lie Groups</p>
+<ul>
+<li>MATH6002　现代微分几何概论（I）</li>
+<li><p>Introduction to Modern Differential Geometry</p>
+<ul>
+<li>1、介绍现代微分几何的基本知识，涉及微分流形、多重线性代数，向量场、外微分、流形上stokes 公式、纤维丛（向量丛）初步。2、介绍黎曼流形基本概念和工具。涉及黎曼度量及联络、测地线、曲率、各种比较定理。</li>
+<li>1、微分流形、多重线性代数、向量丛（张量丛）和张量场、外微分、流形上Stoke公式及其应用。基本要求：微积分、线性代数、适当熟悉经典微分集合的曲面论。2、黎曼流形及其黎曼联络、测地线、曲率、各种形式的比较定理和Morse指标定理、球定理。基本要求：微分流形初步、代数拓扑基础。</li>
+</ul>
+</li>
+<li><p>陈省身、陈维桓，《微分几何讲义》；伍鸿熙、沈纯理、虞言林，《黎曼几何初步》。</p>
+</li>
+<li><p>MATH6003 李群和李代数</p>
+</li>
+<li><p>Lie Group and Lie Algebra</p>
+<ul>
+<li>一、李群和李代数基础：1、李群和李代数的定义及常见例子；2、单参数子群和指数映射；3、李群基本定理和Cartan闭子群定理；4、伴随表示，李群的不变子群、中心、可交换性等与李代数相应性质的关系；5、复盖群，李群之间的同态，齐性空间与商群；6、线性李群和线性李代数，具体的线性李群，例如SU(2), SO(3), SO(4), SO(3,1)；Maurer-Cartan形式，Harr测度。二、半单李代数的结构与分类：1、可解李代数与幂零李代数；2、Cartan 分解；3、半单李代数的Cartan判别；4、复半单李代数的根系；5、复半单李代数的素根系与Dynkin图；6、复半单李代数的分类；7、实半单李代数。</li>
+</ul>
+</li>
+<li><p>黄宣国，《李群基础》；项武义，《李群讲义》；严志达、许以超，《Lie群及其Lie代数》；Segal A. A. &amp; Walde. R. E, Introduction to Lie groups and Lie Algebras.</p>
+</li>
+<li><p>MATH6010　索伯列夫空间</p>
+</li>
+<li>Sobolev Spaces<br>开课院系：数学研究所 　　 任课教师：陈文斌副教授<br>开课学期：第一 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位基础课 适用专业：数学各专业<br>本课程的教学目的<br>介绍Sobolev空间的基本知识，为进一步学习偏微分方程理论和数值解打下基础。<br>教学内容及基本要求<br>内容：实分析和泛函分析基础，LP空间和Wmp空间的基本性质，Sobolev空间的嵌入和致密嵌入定理，Sobolev空间的插值理论，分数次Sobolev空间。基本要求：1、掌握Sobolev空间的定义和基本性质；2、掌握Sobolev空间的关系；3、掌握广义函数和Fourier变换的定义。<br>考核方式及要求<br>考试。要求基本概念、基本定理清楚。<br>学习本课程的前期课程要求<br>实分析、泛函分析、复分析。<br>教材及主要参考书目、文献与资料<br>李立康，《Sobolev空间引论》；R. A. Adams, Sobolev Spaces.</li>
+</ul>
+<p>MATH6004　现代偏微分方程<br>Modern Partial Differential Equations<br>开课院系：数学研究所 　　任课教师：陈恕行教授<br>开课学期：第二 学分：3 周学时：3 总学时：54<br>课程性质：硕士学位基础课 适用专业：数学各专业<br>本课程的教学目的<br>偏微分方程的理论和方法在数学学科中占有重要地位，本课程介绍以泛涵分析方法为基础的偏微分方程近代理论。<br>教学内容及基本要求<br>广义函数的概念与运算；索伯列夫空间；椭圆型方程的边值问题；发展型方程的半群方法；双曲型方程的能量方法和伽辽金方法。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>泛涵分析、数学物理方程。<br>教材及主要参考书目、文献与资料<br>陈恕行、洪家兴，《偏微分方程近代方法》，复旦大学出版社，1985<br>J. Chagarian, A. Piriou, Introduction to the Theory of Partial Differential Equations, North-Holland Pub. Co., 1982</p>
+<p>MATH6005　泛函分析<br>Functional Analysis<br>开课院系：数学研究所 　　 任课教师：童裕孙教授<br>开课学期：第一 学分：3 周学时：3 总学时：54<br>课程性质：硕士学位基础课 适用专业：数学各专业<br>本课程的教学目的<br>本课程介绍在数学各分支有着广泛应用的泛函分析的基本概念和基本定理，包括Riesz-Schauder理论，正规算子谱分解，无界算子及算子半群等内容，使学生理解并掌握无限维空间上映射的若干重要的一般性质。<br>教学内容及基本要求<br>一、线性泛涵分析基础：1、拓扑空间的概念；2、拓扑线性空间的概念；3、紧性，紧空间的乘积空间，Stone-Weiestrass定理，Banach-Alaoglu定理；4、Hahn-Banach定理，凸集的分离性，Krein-Milman定理；5、线性算子基本定理，各种收敛性。二、谱论I：紧算子及Fredholm算子：1、Banach代数中元素的谱，谱半径公式；2、线性算子的谱的分类，例；3、紧算子的性质，Riesz-Schauder理论；4、Fredholm算子的特征，乘积算子的指标，指标在小扰动下的稳定性。三、谱论II：正规算子：1、Banach代数的Gelfand表示；2、C*-代数的概念，Gelfand-Naimark定理；3、谱测度与谱积分；4、正规算子的谱分解定理。四、无界算子：1、对称算子与自伴算子；2、对称算子的自伴扩张；3、自伴算子的扰动；4、无界算子序列的收敛性。五、算子半群：1、向量值函数； 2、Blochner积分；3、算子半群的概念；4、C0类算子半群及其表示；5、无穷小母元的特征。六、映射的微分，隐函数定理，泛函极值。七、拓扑度简介和不定点定理。（注：四、五、六、七为选讲内容。）<br>考核方式及要求<br>考试。基本概念的叙述及讨论，基本定理证明的思路及主要环节，基本方法的综合应用。<br>学习本课程的前期课程要求<br>本科实变函数与泛函分析初步。<br>教材及主要参考书目、文献与资料<br>夏道行、吴卓人、严绍宗、舒五昌，《实变函数论与泛函分析》（上下册），高等教育出版社<br>张恭庆等，《泛函分析讲义》，北京大学出版社<br>K. Yoside, Functional Analysis, Springer-Verlag, Berlin, Heidelberg, New York</p>
+<p>MATH6007　实分析<br>Real Analysis<br>开课院系：数学研究所 任课教师：童裕孙教授<br>开课学期：第二 学分：3 周学时：3 总学时：54<br>课程性质：硕士学位基础课 适用专业：数学各专业<br>本课程的教学目的<br>本课程以实变函数论基础和泛涵分析初步为先导，介绍实变量函数的函数空间及这些空间之间的变换，提供基本的实分析方法，为有关各方面的研究与应用打下基础。<br>教学内容及基本要求<br>1、Lebsgue积分理论，LP空间，LP空间中点列的收敛性；2、Fourier变换的L1 理论，L2理论和Plancherel定理；3、极大模函数，覆盖引理，LP插值定理；4、Riesz变换，Poisson积分；5、Littlewood-Paley理论与乘子；6、Hardy空间H1,有界平均振动函数空间BMO,Besov空间简介。要求学生掌握实分析的基本概念，理解基本定理证明的思路及主要环节，并能综合运用实分析的方法证明有关的命题。<br>考核方式及要求<br>考试。基本概念的叙述与分析，基本定理证明的思路，基本方法的一般应用。<br>学习本课程的前期课程要求<br>本科实变函数论、泛函分析初步。<br>教材及主要参考书目、文献与资料<br>程民德、邓东皋，龙瑞麟，《实分析》，高等教育出版社<br>E. M. Stein, G. Weiss, Introduction to Fourier Analysis on Euclidean Space, Princeton, 1971<br>E. M. Stein, Singular Integrals and Differentiability Properties of Functions, Princeton, 1970</p>
+<p>MATH6008　复分析<br>Complex Analysis<br>开课院系：数学研究所 任课教师：陈纪修教授<br>开课学期：第二 学分：3 周学时：3 总学时：54<br>课程性质：硕士学位基础课 适用专业：数学各专业<br>本课程的教学目的<br>复分析是数学研究的重要工具，是数学类各专业研究生必须掌握的基础课程。本课程是本科生“复变函数”课程的继续与深入，介绍复分析方向经典的、具有重要应用价值的内容，使学生掌握在研究中应用复分析这一工具的方法。<br>教学内容及基本要求<br>正规族理论: 黎曼映照定理；单叶函数的偏差定理；模函数；多连区域到单位圆上的共形映射；次调和函数；双曲度量与超双曲度量；布洛赫常数与匹卡定理；调和测度；林德洛夫定理；黎曼曲面的定义；黎曼曲面上的微分与积分；单值性定理；单值化定理。<br>考核方式及要求<br>考试。要求学生掌握上述复分析的重要经典内容，认识它们的理论意义与应用价值，并能应用复分析的工具解答一些理论上的问题。<br>学习本课程的前期课程要求<br>本科生“复变函数”课程。<br>教材及主要参考书目、文献与资料<br>张南岳、陈怀惠，《复变函数论选讲》，北京大学出版社<br>L. V. Ahlfors, Complex Analysis, 3rd edition, McGraw-Hill, New York, 1979<br>L. V. Ahlfors, Conformal Invariants, McGraw-Hill, New York, 1973</p>
+<ul>
+<li>MATH6010　索伯列夫空间</li>
+<li>Sobolev Spaces<br>开课院系：数学研究所 　　 任课教师：陈文斌副教授<br>开课学期：第一 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位基础课 适用专业：数学各专业<br>本课程的教学目的<br>介绍Sobolev空间的基本知识，为进一步学习偏微分方程理论和数值解打下基础。<br>教学内容及基本要求<br>内容：实分析和泛函分析基础，LP空间和Wmp空间的基本性质，Sobolev空间的嵌入和致密嵌入定理，Sobolev空间的插值理论，分数次Sobolev空间。基本要求：1、掌握Sobolev空间的定义和基本性质；2、掌握Sobolev空间的关系；3、掌握广义函数和Fourier变换的定义。<br>考核方式及要求<br>考试。要求基本概念、基本定理清楚。<br>学习本课程的前期课程要求<br>实分析、泛函分析、复分析。<br>教材及主要参考书目、文献与资料<br>李立康，《Sobolev空间引论》；R. A. Adams, Sobolev Spaces.</li>
+</ul>
+<p>MATH6011 随机分析<br>Stochastic Analysis<br>开课院系：数学研究所 　　任课教师：应坚刚教授<br>开课学期：第一 学分：3 周学时：3 总学时：54<br>课程性质：硕士学位基础课 适用专业：数学各专业<br>本课程的教学目的<br>使学生对随机微积分的理论与方法有基本的理解。<br>教学内容及基本要求<br>教学内容：１、一般过程理论，倍时，流；２、鞅的理论：正则性理论，收敛理论，分解定理，局部鞅；３、随机积分：Ito型积分及其性质，意义，It?公式；4、Girsanov公式与鞅表示定理；5、随机微分方程简介。基本要求：理解随机微积分与一般微积分的区别，掌握鞅与随机积分的基本方法，能熟练地运用It?公式。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>随机过程，泛函分析，概率论。<br>教材及主要参考书目、文献与资料<br>自编《随机过程讲义》。<br>Revuz, Yor, Continuous inantingale and Brownian Motion, 1991<br>Kallenberg, Foundations of Modern Probability, 2001</p>
+<p>MATH6012　概率论基础与随机过程<br>Foundation of Probability Theory and Stochastic Processes<br>开课院系：数学研究所 　　任课教师：应坚刚教授<br>开课学期：第一 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位基础课 适用专业：数学各专业<br>本课程的教学目的<br>使学生全面完整地理解概率论与随机过程的数学基础。<br>教学内容及基本要求<br>教学内容：1、概率基础：测度论，积分，随机变量与分布，收敛性条件期望；2、随机过程：Kolmogorov定理，Markov过程，Markov链，Poisson过程，Brown运动及性质。基本要求：掌握测度论的方法，理解概率论的背景与理论的关系，理解基本的随机过程及其性质。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>实变函数、泛函分析、概率论。<br>教材及主要参考书目、文献与资料<br>自编《随机过程讲义》。<br>Billingsley, Probability and Measures, 1986<br>Bauer, Probability Theory and Elements of Measure Theory, 1981</p>
+<p>MATH6015　物理学与偏微分方程<br>Physics and Partial Differential Equations<br>开课院系：数学研究所 　 　任课教师：秦铁虎教授<br>开课学期：第一 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位基础课 适用专业：数学各专业<br>本课程的教学目的<br>介绍物理学、力学中的重要偏微分方程模型及其数学结构。<br>教学内容及基本要求<br>讲授流体力学，电动力学，磁流体力学，弹性力学，热弹性力学及粘弹性力学等中的偏微分方程模型及其数学结构，每次讲授其中部分内容。要求学生掌握所讲授的偏微分方程模型及其数学结构，并掌握导出上述模型的方法。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>要求学过数理方程。<br>教材及主要参考书目、文献与资料<br>李大潜、秦铁虎，《物理学与偏微分方程》（上、下），高等教育出版社</p>
+<p>MATH6016　计算方法<br>Computational Method<br>开课院系：数学研究所 　　任课教师：曹志浩教授<br>开课学期：第一 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位基础课 适用专业：数学各专业<br>本课程的教学目的<br>掌握常见的计算方法的算法、理论和性质。<br>教学内容及基本要求<br>包括：准备知识；线性代数方程组的直接算法和迭代方法；正交化和最小二乘法；非对称特征问题和对称特征值问题。常微分方程初值问题；椭圆型方程的有限差方法和有限元法；抛物型方程和双曲型方程。函数的插值；样条插值和曲线拟和；最佳逼近；数值积分；快速傅立叶变换；函数方程求根。<br>考核方式及要求<br>考试。熟练掌握计算方法的基本内容。<br>学习本课程的前期课程要求<br>数值线性代数、微分方程数值解、数值逼近。<br>教材及主要参考书目、文献与资料<br>G. H. Golub, C. F. Van Loan, Martrix Computations, The Johns Hopkins University, 3rd edition, Boltimore, 1996</p>
+<p>MATH6017　运筹学<br>Operations Research<br>开课院系：管理学院 　　 任课教师：叶耀华副教授等<br>开课学期：第一 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位基础课 适用专业：数学各专业<br>本课程的教学目的<br>掌握运筹学基本理论、方法和应用。<br>教学内容及基本要求<br>本课程与“数学规划（Ⅰ）（Ⅱ）”、“组合最优化”等课程一起，组成完整的运筹学理论与方法教学体系。主要教学内容包括：大规模最优化方法、随机决策、博弈理论和存贮论、排队论等，以及一些运筹学应用问题。<br>考核方式及要求<br>考试。笔试（开卷或闭卷）。<br>学习本课程的前期课程要求<br>线性规划、概率论。<br>教材及主要参考书目、文献与资料<br>Winston W. L, Operations Research, Duxbury Press, 1994<br>Martin R. K., Large Scale Linear and Integer Optimization, Kluwer Academic, 1999<br>Puterman M. L., Markov Decision Processes, Wiley-Interscience, 1994<br>Operations Research</p>
+<p>MATH6018　控制理论基础<br>Basics of Control Theory<br>开课院系：数学研究所 　　<br>任课教师：吴汉忠副教授、周渊副教授、楼红卫副教授、潘立平副教授、刘道百讲师<br>开课学期：第一 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位基础课 适用专业：数学各专业<br>本课程的教学目的<br>使学生了解控制理论的应用背景，认识到这是一门技术科学的理论基础课程。在学习中不仅要重视理论推导，更要重视如何合理地提出控制问题。<br>教学内容及基本要求<br>介绍控制理论产生的背景，其研究对象、研究的基本问题等。具体内容包括：1、控制的意义和作用；2、受控对象的数学描述；3、控制系统的分析；4、线性系统的能控性和能观性；5、线性系统的实现；6、不变性原理和干扰解耦；7、控制系统最优调节器的设计；8、受干扰系统的线性二次最优控制。<br>考核方式及要求<br>考试。笔试。<br>学习本课程的前期课程要求<br>数学分析、线性代数、常微分方程、普通物理学。<br>教材及主要参考书目、文献与资料<br>李训经、雍炯敏、周渊，《控制理论基础》，高等教育出版社，2002<br>Wonham W. M., Linear Multivariable Control: A Geometric Approach, 2nd edition, Springer-Verlag, 1979</p>
+<p>MATH6019　变分迭代法<br>Variational Iterative Method<br>开课院系：数学研究所 　 　任课教师：曹志浩教授<br>开课学期：第二 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位基础课 适用专业：数学各专业<br>本课程的教学目的<br>使计算数学专业的研究生掌握迭代法的理论、算法和性质。<br>教学内容及基本要求<br>包括：预备知识；迭代法理论；基本定常迭代；最优多步迭代法；方法的实施；多项式加速方法。基本要求：掌握迭代法的基本概念，如：收敛速度；定常迭代法；二次泛函讨论收敛性、广义SOR法；正则分裂；可对称方法；共轭梯度和切比雪夫加速迭代；可对称化基本迭代。并了解最新的迭代法，如GMRES方法和BICG法的多种变形。<br>考核方式及要求<br>考试。熟练掌握迭代法的基本性质，算法和理论。<br>学习本课程的前期课程要求<br>《数值线性代数》，《高等代数》。<br>教材及主要参考书目、文献与资料<br>曹志浩,《数值线性代数》，复旦大学出版社，1996<br>E. H. Golub, C. F. Loan, Matrix Computations, The Johns Hopkins University, 3rd edition, Boltimore, 1996</p>
+<p>MATH6020　矩阵计算<br>Matrix Computation<br>开课院系：数学研究所 　　任课教师：苏仰锋副教授<br>开课学期：第一 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位基础课 适用专业：数学各专业<br>本课程的教学目的<br>矩阵计算是所有科学计算的核心，让学生了解并掌握矩阵计算的基本知识、技巧及算法。<br>教学内容及基本要求<br>1、求解线性方程组的直接法及数值稳定性；2、求解最小二乘问题的各种直接法；3、非对称、对称特征值问题的QR算法；4、奇异值分解的计算；5、用Krylon子空间方法求解线性方程组及特征值问题。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>线性代数、Metlab编程语言。<br>教材及主要参考书目、文献与资料<br>J. Demmel, Applied Numerical Linear Algebra, SIAM, 1997</p>
+<p>MATH6021　代数几何<br>Algebraic Geometry<br>开课院系：数学研究所 　　 任课教师：杨劲根教授<br>开课学期：第一 学分：3 　 　周学时：3 总学时：54<br>课程性质：硕士学位基础课、博士学位专业课 适用专业：数学各专业<br>本课程的教学目的<br>本课程主要讲解经典代数几何中的一些主要内容，使学生对代数簇，特别是拟射影簇的性质有基本的了解。<br>教学内容及基本要求<br>要求学生有一定的抽象代数和复分析的基础，交换代数并不是必备的。在数学中使用的一些交换代数大部分会再讲一下。内容包括：仿射簇；拟射影簇；正则映射；有理映射簇的积；代数簇的整体性质（不可均性，维数等）和局部性质（光滑性、正规性等），除子和代数簇上的微分形式。<br>考核方式及要求<br>考试。要求能完成教材中的一半左右习题。<br>学习本课程的前期课程要求<br>抽象代数、复分析。<br>教材及主要参考书目、文献与资料<br>I. R. Shafarevich, Basic Algebraic Geornetry I, Springer-Verlag<br>J. Harris, Algebraic Geometry, A First Course, GTM133, Springer-Verlag</p>
+<p>MATH6023　代数曲面<br>Algebraic Surfaces<br>开课院系：数学研究所 　　 课教师：杨劲根教授<br>开课学期：第四 学分：3 　　 周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：基础数学、应用数学<br>本课程的教学目的<br>对代数曲面的双有理分类的基础有初步了解。<br>教学内容及基本要求<br>代数曲面上的相交理论；Rieinann-Rech定理；正则映射；有理映射；Kodcira维数；分类等。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>概形与层或代数几何。<br>教材及主要参考书目、文献与资料<br>A. Beanville, Algebraic Surfaces, London, Math, Soc<br>Barth, Peters, Vandeven, Compact Complex Surfaces, Springer-Verlag</p>
+<p>MATH6027　代数拓扑<br>Algebraic Topology<br>开课院系：数学研究所 　 　任课教师：东瑜昕教授<br>开课学期：第二 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：基础数学<br>本课程的教学目的<br>通过微分形式系统学习流形上的上同调理论。<br>教学内容及基本要求<br>教学内容：De Rham理论；Cěch –de Rham复形；谱序列与应用。基本要求：掌握de Rham上同调理论与Poincaré对偶；掌握Cěch –de Rham上同调理论；学会用谱序列来分析问题。<br>考核方式及要求<br>考试。闭卷。<br>学习本课程的前期课程要求<br>交集拓扑学、代数学基础、流形基础、代数拓扑学基础。<br>教材及主要参考书目、文献与资料<br>李元熹、张国梁，《拓扑学》<br>Raoul Bott Loring W. Tu, Differential Forms in Algebraic Topology<br>Warner F. W., Foundations of Differential Manifolds and Lie Groups</p>
+<p>MATH6031　孤立子理论<br>Theory of Soliton<br>开课院系：数学研究所 　 　任课教师：周子翔教授<br>开课学期：第二 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：基础数学<br>本课程的教学目的<br>本课程介绍可积系统与孤立子理论中的基本概念和方法，以使学生能了解孤立子理论中最本质的反散射方法及求显式解的B?cklund变换、Darboux变换与二元Darboux变换等常用方法。在此基础上可学习孤立子理论近年的发展并阅读有关的论文。<br>教学内容及基本要求<br>1、KdV方程的反散射理论简介；2、Lax对、可积系统的导出；3、Schr?dinger方程的散射理论；4、Schr?dinger方程的反散射理论；5、AKNS系统的散射和反散射理论；6、B?cklund交换简介；7、AKNS系统的Darboux变换；8、Darboux变换下散射数据的变化；9、2+1维可积系统的Darboux变换与二元Darboux变换；10、高维可积系统及其几何应用。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>教材及主要参考书目、文献与资料<br>Eckhaus W. &amp; Van Harten A. The Inversse Scattering Transformation and The Theory of Solitons(中译本，《逆散射变换与孤立子理论》)<br>Matveev V. B. &amp; Salle M. A.，Darboux Transformation and Solitons<br>谷超豪等，《孤立子理论中的达布变换及其几何应用》；李翊神，《孤子与可积系统》。</p>
+<p>MATH6033　规范场<br>Gauge Field Theory<br>开课院系：数学研究所 　 　任课教师：周子翔教授<br>开课学期：第三 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：基础数学<br>本课程的教学目的<br>掌握规范场的基本知识。<br>教学内容及基本要求<br>1、纤维丛：主丛和配丛，联络和曲率，规范变换，位相因子和环路位相因子等；2、Yang-Mills 场：Yang-Mills泛函和Yang-Mills方程，能量动量张量，自对偶Yang-Mills场，Yang-Mills-Higgs场等；3、特殊的规范场：静态规范场，球对称规范场，瞬子解；4、Yang-Mills场的精确求解：自对偶Yang-Mills方程与Yang-Mills-Higgs方程的Darboux变换，自对偶Yang-Mills方程的约化等。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>微分流形、李群和李代数。<br>教材及主要参考书目、文献与资料<br>谷超豪，On Classical Yang-Mills Fields (Physics Reports 80)<br>Bleecker, Gauge Theory and Variational Principles<br>Atiyah, Geometry of Yang-Mills Fields</p>
+<p>MATH6034　黎曼曲面<br>Riemann Surface<br>开课院系：数学研究所 　　 任课教师：金路<br>开课学期：第三 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：基础数学<br>本课程的教学目的<br>介绍黎曼曲面与代数曲线的一些理论知识。<br>教学内容及基本要求<br>黎曼曲面与代数曲线的概念与基本性质，亚纯函数、亚纯微分和调和微分的存在性。代数曲线的正则化。除子，相交数与Bezout定理，分歧因子与Riemann-Hurwitz公式, Riemann双线性关系，Riemann-Roch定理及其应用，Abel定理与Jacoki反演定理，亚纯函数域与嵌入定理。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>复变函数、线性代数、微分流形初步。<br>教材及主要参考书目、文献与资料<br>H. M. Farkas and I. Kra, Riemann Surface, Springer-Verlag, New York<br>P. Griffiths, 《代数曲线》，北京大学出版社<br>伍鸿熙、吕以辇、陈志华，《紧黎曼曲面引论》，科学出版社</p>
+<p>MATH6035　平面拟共形映射<br>Quasiconformal Mappings in the Plane<br>开课院系：数学研究所 　　 任课教师：陈纪修教授<br>开课学期：第四 学分：3 　　 周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：基础数学<br>本课程的教学目的<br>拟共形映射是共形映射的自然推广。由于拟共形映射与共形映射相比要求较弱，所以应用更广，例如拟共形映射在偏微分方程，微分几何，黎曼曲面，离散群，复动力系统，泰希缪勒空间等理论方面，都有重要的应用。平面拟共形映射的理论是复分析方向的研究生必须掌握的基础。<br>教学内容及基本要求<br>曲线族的极值长度概念；曲边四边形与两连区域的模的概念；可微拟共形映射的定义与性质；拟共形映射的分析定义、几何定义，以及两者之间的等价性；几类极值两连区域与它们的模；拟共形映射的边界对应；拟圆周与拟共形反射；拟圆的几何特征；拟共形映射的存在性定理；泰希缪勒空间理论简介。<br>考核方式及要求<br>考试。要求学生掌握拟共形映射的基本理论与基本方法，为进入拟共形映射理论的研究打好基础。<br>学习本课程的前期课程要求<br>本科生“复变函数”课程与硕士生“复分析”课程。<br>教材及主要参考书目、文献与资料<br>L. V. Ahlfors, Lectures on Quasiconformal Mappings, Nostrand Company, New York, 1966<br>李忠，《拟共形映射及其在黎曼曲面论中的应用》，科学出版社，1988</p>
+<p>MATH6036　分形几何学<br>Fractal Geometry<br>开课院系：数学研究所 　　 任课教师：邱维元教授<br>开课学期：第四 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：基础数学、应用数学<br>本课程的教学目的<br>分形几何是在物理、地球物理、生物、信号和图像处理以及金融、经济等领域有重要应用的现代数学工具，本课程介绍分形几何的基本概念和数学理论，使学生掌握进行分形几何理论研究和进行分形几何应用的基本知识和基本技巧。<br>教学内容及基本要求<br>分形概念，分形测度和维数，分形维数计算，分形集的结构和性质，迭代函数系统，自相似集和自仿射集，函数图像的分形及其维数、随机分形，统计自相似性，Brown运动和分式Brown运动等。<br>考核方式及要求<br>考试。闭卷笔试，要求掌握基本概念和基本技巧。<br>学习本课程的前期课程要求<br>实变函数、泛函分析、拓扑学基础、概率论、随机过程基础。<br>教材及主要参考书目、文献与资料<br>文志英，《分形几何的数学基础》，上海科技教育出版社，2000<br>K. Falconer, The Geometry of Fractal Sets, Cambridge University Press, 1985<br>K. Falconer, Fractal Geometry-Mathematical and Applications, John Wiley &amp; Sons, 1990</p>
+<p>MATH6037　非线性发展方程（I）<br>MATH6038　非线性发展方程（II）<br>Nonlinear Evolution Equations<br>开课院系：数学研究所 　　 任课教师：郑宋穆教授<br>开课学期：第三和四 学分：3+3 周学时：3+3 总学时：54+54<br>课程性质：硕士学位专业课 适用专业：应用数学、基础数学<br>本课程的教学目的<br>通过本课程的学习，使硕士生及博士生掌握处理非线性发展方程整体解及解的渐进性态的一些方法与技巧，为他们进一步学习及研究打下一个良好的基础。<br>教学内容及基本要求<br>教材共分为六章，介绍处理非线性发展方程整体解及渐进性态的一些方法。第一章，概论，介绍概况及发展现状；第二章，介绍算子半群理论、非线性算子半群方法，并将其应用于非线性抛物型方程、双曲型方程；第三章，紧微性方法及单调算子方法：1、紧微性方法，2、单调算子方法，3、一些推广；第四章，单调迭代与不变区域方法：1、引言，2、单调迭代法，3、不变区域；第五章，小初值整体存在性：1、引言，2、完全非线性抛物型方程的柯西问题，3、完全非线性抛物型方程初边值问题；第六章，解的渐进性态及整体吸引子：1、引言，2、一个分析引理及其应用，3、收敛于稳态问题的解，4、整体吸引子。<br>考核方式及要求<br>考试。要求理解及掌握课程中所讲方法，并能应用到具体方程（组）。<br>学习本课程的前期课程要求<br>要求学习过Sobolev空间，二阶线性椭圆型方程边值问题可解性理论。<br>教材及主要参考书目、文献与资料<br>教材为郑宋穆教授所编讲义（此讲义拟以后正式出版），各章参考讲义中提及的有关文献。</p>
+<p>MATH6039　积分方程和奇异积分方程论<br>Theory of Integral Equations and Singular Integral Equations<br>开课院系：数学研究所 　　 任课教师：张万国副教授、程晋教授<br>开课学期：第四 学分：3 　 周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：基础数学、应用数学<br>本课程的教学目的<br>通过本课程的教学，使得学生能够了解一些归结为积分方程和奇异积分方程的实际问题的背景，初步掌握积分方程和奇异积分方程的基本研究方法。<br>教学内容及基本要求<br>本课程将讲授以下几方面的内容：1、可归结为积分方程和奇异积分方程的有关实际问题，包括散射理论中的有关问题等；2、积分方程和奇异积分方程的基本方法；3、积分方程和奇异积分方程的有关数值解法；4、目前国内外的最新研究成果介绍。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>学过本科生阶段的数理方程、泛函分析及数值分析等有关课程。<br>教材及主要参考书目、文献与资料<br>陈传璋、侯宗义、李明忠，《积分方程及其应用》，上海科技出版社；侯宗义、李明忠等，《奇异积分方程理论》，复旦大学出版社；有关论文及自编资料。</p>
+<p>MATH6042　C<em>-代数（I）<br>C</em>-Algebras (I)<br>开课院系：数学研究所 　　 任课教师：陈晓漫教授、黄昭波、徐胜芝副教授<br>开课学期：第三 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：基础数学<br>本课程的教学目的<br>要求学生掌握C<em>-代数和Von Neumann代数的基础知识。<br>教学内容及基本要求<br>C</em>-代数的性质，Kaplansky稠密性定理；Von Neumann的双交换定理；GSNS构造；C*-代数的表示理论，正规泛函的Radm-Nileodyn定理。要求学生具有泛函分析，算子理论的知识。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>教材及主要参考书目、文献与资料</p>
+<p>MATH6043　线性拓扑空间，Banach代数<br>Topological Vector Spaces, Banach Algebra<br>开课院系：数学研究所 　　 任课教师：陈晓漫教授、郭坤宇教授等<br>开课学期：第四 学分：3 　　 周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：基础数学<br>本课程的教学目的<br>要求学生掌握线性拓扑空间的基础知识与Banach代数。<br>教学内容及基本要求<br>线性拓扑空间的定义和性质；Krein-Milman定理；Banach代数的基本性质；谱半径公式；极大理想与Gelfand定理。要求学生有泛函分析的基础。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>教材及主要参考书目、文献与资料</p>
+<p>MATH6048　拟微分算子<br>Pseudo-differential Operators<br>开课院系：数学研究所 　　 任课教师：陈恕行教授<br>开课学期：第三或四 学分：3 周学时：3 总学时：54<br>课程性质：硕士学位专业课、博士学位专业课 适用专业：基础数学<br>本课程的教学目的<br>拟微分算子是微分算子的推广，近年来已发展成为分析学的一类基本工具，广泛地应用于数学各分支。本课程将介绍拟微分算子的概念、基本性质以及它在偏微分方程理论中的应用。<br>教学内容及基本要求<br>1、拟微分算子的概念与基本运算；2、拟微分算子的微局部性质；3、拟微分算子的有界性；4、拟微分算子在Cauchy问题中的应用；5、椭圆算子与亚椭圆算子；6、双曲型方程的初边值问题；7、奇性传播与反射。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>数学物理方程、泛函分析、现代偏微分方程。<br>教材及主要参考书目、文献与资料<br>陈恕行，《拟微分算子》，高等教育出版社，1995<br>齐民友，《线性偏微分算子引论》，科学出版社，1984</p>
+<p>MATH6050　动力系统<br>Dynamical Systems<br>开课院系：数学研究所 　 　任课教师：阮炯教授<br>开课学期：第二 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：基础数学、运筹学与控制论<br>本课程的教学目的<br>对动力系统的基本理论及其应用具有较深的了解。<br>教学内容及基本要求<br>1、离散动力系统的周期解与混沌解，一组的情形，二组的情形，高组的情形；2、对连续动力系统的初值问题的稳定性与定性，分支理论等内容比本科生的常微分方程教程更进一步的介绍，并对混沌理论作初步介绍；3、对具时滞及具脉冲的等类型的动力系统作初步介绍。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>本科生毕业即可。<br>教材及主要参考书目、文献与资料</p>
+<p>MATH6052　微分拓扑<br>Differential Topology<br>开课院系：数学研究所 　　 任课教师：东瑜昕教授<br>开课学期：第二 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：基础数学<br>本课程的教学目的<br>本课程的教学目的是：介绍以微分形式为工具来引入和研究同伦和同调论的主要概念和结果。<br>教学内容及基本要求<br>核心内容围绕de Rham theory, Cech-de Rham complex, Spectral sequences和Characteristic Classes(示性类)展开，还包括同伦论中的应用。 基本要求：只需具备线性代数、微积分和点集拓扑知识。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>线性代数、微积分、点集拓扑。<br>教材及主要参考书目、文献与资料<br>Bott-Tu, Differential Forms in Algebraic Topology<br>Warner, Foundations of Differential Manifolds and Lie Groups<br>Greenberg, Lectures on Algebraic Topology</p>
+<p>MATH6053　有限元数值分析<br>Finite Element Method<br>开课院系：数学研究所 　 　任课教师：陈文斌副教授<br>开课学期：第二 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：计算数学、应用数学<br>本课程的教学目的<br>介绍有限元方法的基本数学理论。<br>教学内容及基本要求<br>教学内容：有限元基本概念；Sobolev空间介绍；变分法和有限元，有限元空间构造；Sobolev空间插值理论；有限元的多重网格方法，最大模估计；弹性问题有限元方法；混合方法和其迭代技术；算子插值理论的应用。要求：掌握有限元方法的理论和分析方法；学会用有限元方法求解椭圆型方程。<br>考核方式及要求<br>考试。考试加机试。<br>学习本课程的前期课程要求<br>数值分析。<br>教材及主要参考书目、文献与资料<br>S. C. Brenner, L. R. Satt, The Mathematical Theory of Finite Element Methods.</p>
+<p>MATH6054　并行计算<br>Parallel Computation<br>开课院系：数学研究所 　 　任课教师：苏仰锋副教授<br>开课学期：第四 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：计算数学<br>本课程的教学目的<br>了解并行计算机原理、并行计算的算法与实现。<br>教学内容及基本要求<br>并行计算机介绍；并行算法的基本概念；数值代数中的并行算法；求解偏微分方程的并行算法。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>计算机基本原理、数值代数、偏微分方程数值解基本方法。<br>教材及主要参考书目、文献与资料</p>
+<p>MATH6055　常微分方程数值解<br>Numerical Solution of ODEs<br>开课院系：数学研究所 　 　任课教师：程晋教授<br>开课学期：第一 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：计算数学<br>本课程的教学目的<br>了解常微分方程数值求解的常用算法，实现技巧及其理论分析，并能用MATLAB编程实现。<br>教学内容及基本要求<br>1、基础数学理论；2、变量离散的方法；3、基本算法；4、收敛性和稳定性分析；5、误差估计及控制；6、刚性问题的单步法；7、刚性问题的多步法。<br>考核方式及要求<br>考试。理论考试70分，上机考试30分。<br>学习本课程的前期课程要求<br>常微分方程，数学分析。<br>教材及主要参考书目、文献与资料<br>L. F. Shavpine, Numerical Soution of Ordinary Differential Equations, Chapman ＆ Hall, 1994</p>
+<p>MATH6056　现代积分方程理论<br>Theory of Modern Integral Equations<br>开课院系：数学研究所 　　<br>任课教师：张万国副教授、程晋教授、王彦博讲师<br>开课学期：第二 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：计算数学<br>本课程的教学目的<br>通过本课程的教学，使得学生能够了解现代积分方程的理论。掌握现代积分方程的基本方法。<br>教学内容及基本要求<br>本课程将讲述以下几方面的内容：现代积分方程基本理论；积分方程的数值方法；第一类Fredholm积分方程理论。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>学过本科生阶段数理方程、泛函分析及数值分析等有关课程。<br>教材及主要参考书目、文献与资料<br>陈传璋、侯宗义、李明忠，《积分方程及其应用》，上海科技出版社；有关论文及自编资料。</p>
+<p>MATH6058　椭圆方程组的理论和边值问题<br>Boundary Value Problems for Elliptic Systems<br>开课院系：数学研究所 　　 任课教师：张万国副教授、程晋教授<br>开课学期：第三 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：计算数学<br>本课程的教学目的<br>通过本课程的教学，使得研究生初步掌握平面一阶椭圆型方程组的基本理论和基本研究方法。特别了解这些方法在目前的最新进展。<br>教学内容及基本要求<br>本课程将讲授以下几方面的内容：1、一阶椭圆型方程组的基本理论；2、一阶椭圆型方程组的边值问题及其解法；3、一阶椭圆型方程的应用，包括在数学物理及数理方程反问题等方面的应用。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>学过本科生和研究生阶段的数理方程、泛函分析及数值分析等有关课程。<br>教材及主要参考书目、文献与资料<br>I. N. Vekua,《广义解析函数》，1965；R. P. Gilbert,《偏微分方程的函数论方法》，高等教育出版社；有关论文。</p>
+<p>MATH6087　最优控制理论<br>Optimal Control Theory<br>开课院系：数学研究所 　 　任课教师：潘立平、吴汉忠、楼红卫副教授<br>开课学期：第二 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：运筹学与控制论<br>本课程的教学目的<br>使学生领略到最优控制理论的基本任务、基本思想和若干标准结果，为今后的研究提供基础。<br>教学内容及基本要求<br>介绍最优控制理论的研究对象、基本研究方法、主要研究领域和主要结果，并介绍该领域的<br>现状。具体内容包括：1、最优控制理论的历史和研究对象；2、最优控制理论研究的数学基础知识；3、线性系统的时间最优控制；4、非线性最优控制问题的存在性；5、非线性最优控制的最大值原理；6、线性二次最优控制问题；7、动态规划方法。<br>考核方式及要求<br>考试。笔试。<br>学习本课程的前期课程要求<br>数学分析、高等代数、常微分方程、实变函数与泛函分析、控制理论基础。<br>教材及主要参考书目、文献与资料<br>教材自编<br>Bellman, R, Dynamic Programming, Princeton Univ. Press, Princeton, New Jersey, 1957<br>Berkovitz. L. D, Optimal Control Theory, Springer-Verlag, New York, 1974<br>Clarke. F. H., Optimization and Nonsmooth Analysis, Wiley, New York, 1983<br>Gamkrelidze. R. V, Principle of Optimal Control Theory, Plenum Press, New York, 1978<br>Hermes, H.and LaSalle, J. P, Functional Analysis and Time Optimal Control, Academic Press, New York, 1969<br>Pontryagin, L. S., et al, Mathematical Theory of Optimal Processes, Wiley, New York, 1962<br>雍炯敏，《动态规划方法与Hamilton-Jacobi-Bellman方程》，上海科学技术出版社，1992<br>张学铭、李训经、陈祖浩，《最优控制系统的微分方程理论》，高等教育出版社，1989</p>
+<p>MATH6088　随机控制理论<br>Stochastic Control Theory<br>开课院系：数学研究所 　<br>任课教师：雍炯敏教授、汤善健副教授、刘道百讲师<br>开课学期：第二 学分：3 　 周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：运筹学与控制论<br>本课程的教学目的<br>了解和掌握随机控制理论的基础内容，为以后在随机控制和数学金融学等领域进行科学研究做准备。<br>教学内容及基本要求<br>1、预备知识，包括随机积分，Ito公式，SDE，鞅表示定理，BSDE；2、控制系统与最优控制问题；3、线性二次最优控制；4、随机最大值原理；5、动态规划原理与HJB方程；6、部分观测最优控制。<br>考核方式及要求<br>考试。笔试。<br>学习本课程的前期课程要求<br>实变函数论、现代概率论、随机分析、控制理论基础、最优控制理论。<br>教材及主要参考书目、文献与资料<br>教材自编<br>W. H. Fleming, H. M. Soner, Controlled Markov Processes and Viscosity Solutions, Springer, NY, 1992<br>J. Yong, X. Y. Zhou, Stochastic Controls—Hamiltonian Systems and HJB Equations, Springer, 1999</p>
+<p>MATH6089　数学规划（I）<br>Mathematical Programming (I)<br>开课院系：管理学院 　　 任课教师：叶耀华副教授<br>开课学期：第一 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：运筹学与控制论<br>本课程的教学目的<br>掌握线性最优化基本理论和方法。<br>教学内容及基本要求<br>本课程主要内容有：多面体理论，线性规划及其单纯形法，对偶理论和敏感性分析，大规模线性规划的求解，网络流规划等。<br>考核方式及要求<br>考试。笔试（开卷或闭卷）。<br>学习本课程的前期课程要求<br>线性代数。<br>教材及主要参考书目、文献与资料<br>Bertsima, D. J. N. Tistsiklis, Linear Optimization, Athena Scientific, 1997<br>Mathematical Programming</p>
+<p>MATH6090　数学规划（II）<br>Mathematical Programming (II)<br>开课院系：管理学院 　　 任课教师：徐以汎副教授<br>开课学期：第二 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：运筹学与控制论<br>本课程的教学目的<br>通过对本课程的学习，掌握非线性规划的基本理论及一些基本算法及其应用。<br>教学内容及基本要求<br>第一部分、曲分析：曲集，曲函数及其性质；第二部分、最优性条件及对偶，KKT最优条件，约束规格，Legrangian对偶与鞍点最优条件；第三部分、算法与收敛性，无约束最优化，罚函数与障碍函数，可行方向法，线性互补问题。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>教材及主要参考书目、文献与资料<br>M. Bazaraa, Nonlinear Programming: Theory and Alporition</p>
+<p>MATH6091　组合最优化<br>Combinatorial Optimization<br>开课院系：管理学院 　　 任课教师：徐以汎副教授<br>开课学期：第三 学分：3 　　周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：运筹学与控制论<br>本课程的教学目的<br>通过对本课程的学习，使学生掌握组合最优化的基本理论与方法及其应用。<br>教学内容及基本要求<br>最优树最优路；最大流问题；最小费用流问题；最优匹配问题；多面体理论；旅行销售员问题；拟阵理论，NP与NP完全问题。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>教材及主要参考书目、文献与资料<br>W. Coole, Combinatorial Optimization<br>M. Grotschel, Geometric Alqoritions and Combinatorial Optimization</p>
+<p>MATH6092　最优化方法讨论班<br>Seminar on Optimization Methods<br>开课院系：管理学院 　　<br>任课教师：朱道立教授、徐以汎副教授、叶耀华副教授、殷志文副教授<br>开课学期：第三至五 学分：3 周学时：3 总学时：54<br>课程性质：硕士学位专业课 适用专业：运筹学与控制论<br>本课程的教学目的<br>通过本课程的学习，了解和掌握某些最优化方法最新研究，并探讨进一步的深入和推广研究。<br>教学内容及基本要求<br>主要内容有：复杂系统最优化；二层优化方法；离散最优化方法；NP-完全类问题的近似优化方法和启发式方法，网络优化和组合优化等。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>数学规划。<br>教材及主要参考书目、文献与资料<br>Mathematical Programming和Operations Research</p>
+<p>MATH7008　混沌动力学<br>Chaotic Dynamics<br>开课院系：数学研究所 　　任课教师：阮炯教授<br>开课学期：第三 学分：3 周学时：3 总学时：54<br>课程性质：硕士专业选修课 适用专业：基础数学<br>本课程的教学目的<br>掌握离散与连续动力系统的混沌概念、判别方法以及应用。<br>教学内容及基本要求<br>1、一维离散动力系统混沌的Li-Yorke及Devaney的定义以及相互的关系，具体判别的几种方法，对抛物线映射各参数变化范围的不同动力学行为，非线性指标李雅普诺夫指数概念及用途。2、二维离散动力系统混沌的概念及横截同宿轨道的判别方法，Heńon映射实例的剖析。3、连续动力系统混沌的概念及判别，Poincare映射，Melnekov方法。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>一般本科生毕业均可选课。<br>教材及主要参考书目、文献与资料</p>
+<p>MATH7009 泛函微分方程<br>Functional Differential Equation<br>开课院系：数学研究所 　　 任课教师：阮炯教授<br>开课学期：第四 学分：3 周学时：3 总学时：54<br>课程性质：硕士专业选修课 适用专业：基础数学<br>本课程的教学目的<br>对于具有延时的动力系统的解的性质、特点以及实际应用有较深的了解。<br>教学内容及基本要求<br>1、延时的泛函微分方程的应用背景；2、延时泛函微分方程初值问题提法及解的性质；3、线性延时泛函微分方程的求解以及稳定性结果；4、非线性延时泛函数微分方程的解的稳定性与定性理论。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>学过“非线性常微分方程”。<br>教材及主要参考书目、文献与资料</p>
+<p>MATH7024　Navier-Stokes方程数值解<br>Numerical Methods for Conservation Laws<br>开课院系：数学研究所 　 　任课教师：陈文斌副教授<br>开课学期：第三 学分：3 周学时：3 总学时：54<br>课程性质：硕士专业选修课 适用专业：计算数学<br>本课程的教学目的<br>介绍守恒律的基本数学理论和数值方法。<br>教学内容及基本要求<br>内容：1、可压缩流体理论介绍：守恒律的推导；气体动力学的Euler方程和N-S方法；2、数学理论：线性双曲方程；非线性守恒律；双曲方程的非线性系统；3、数值方法：一阶单调格式；高精度方法；边界条件；稳定性分析；4、更多应用：无规则网格；自适应加密；多重网格算法。要求：1、对守恒定律数学理论有定性的了解；2、对守恒律数值方法能运用。<br>考核方式及要求<br>考试。笔试+机试：笔试：基本格式和收敛性分析；机试：用数值方法求解守恒律。<br>学习本课程的前期课程要求<br>应用偏微分方程、数值分析。<br>教材及主要参考书目、文献与资料<br>R. J. Leveque, Numeriacal Methods for Conservation Laws</p>
+<p>MATH7025　油藏数值模拟<br>Reservoir Simulation<br>开课院系：数学研究所 　 　任课教师：程晋教授<br>开课学期：第四 学分：3 周学时：3 总学时：54<br>课程性质：硕士专业选修课 适用专业：计算数学<br>本课程的教学目的<br>了解油藏的基本模型及其计算方法，熟悉大型计算工具包的使用。<br>教学内容及基本要求<br>1、地质和生产动态模型简介；2、动态三维三相黑油模型；3、模型方程的数值离散化；4、井方程和边界条件处理；5、非线性方程组的牛顿型迭代法；6、特殊结构线性系统的预条件迭代解法；7、油藏模型的并行计算。<br>考核方式及要求<br>考试。理论考试70分，上机考试30分。<br>学习本课程的前期课程要求<br>偏微分方程、微分方程数值解、矩阵计算。<br>教材及主要参考书目、文献与资料<br>W. E. Fitzgibbon, Proceedings of the Conference on Mathematical and Computational Methods in Seismic Exploration and Reservoir Modelling, SIAM Phildelphia, 1986</p>
+<p>MATH7026　预条件迭代法<br>Preconditioned Iterative Method<br>开课院系：数学研究所 　　 任课教师：程晋教授<br>开课学期：第三 学分：3 周学时：3 总学时：54<br>课程性质：硕士专业选修课 适用专业：计算数学<br>本课程的教学目的<br>了解预条件因子和迭代法的基本理论，掌握常用的预条件因子和相应的迭代算法。<br>教学内容及基本要求<br>1、迭代法的基本思想；2、不完全分解预条件；3、近似逆预条件；4、Arnoldi型算法；5、Lanzcos型算法；6、多分裂和区域分解法；7、子空间迭代及迭代法性态分析。<br>考核方式及要求<br>考试。理论考试。<br>学习本课程的前期课程要求<br>数学分析、线性代数。<br>教材及主要参考书目、文献与资料<br>Yvu Saad, Numerical Methods for Large Eigenvalue Problems, Manchester University Press, 1992<br>Y. Saad, Iterative Methods for Sparse Linear Systems, PWS, 1996</p>
+<p>MATH7027　马尔科夫链的计算引论<br>Introduction to Computation of Markov Chain<br>开课院系：数学研究所 　　 任课教师：苏仰锋副教授<br>开课学期：第四 学分：3 周学时：3 总学时：54<br>课程性质：硕士专业选修课 适用专业：计算数学<br>本课程的教学目的<br>让学生掌握离散时间及连续时间马尔科夫链的基础知识及应用。掌握通常的求解方法。<br>教学内容及基本要求<br>1、马尔科夫链的基本知识及矩阵表示；2、求解定常分布的直接消元法；3、求解定常分布的二层方法；4、求解定常分布的定常迭代法及Krylov子空间方法；5、无限结构马尔科夫链的矩阵理论及计算；6、马氏链的短期行为计算。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>线性代数、矩阵计算。<br>教材及主要参考书目、文献与资料<br>W. J. Stement, Introduction to the Numerical Solution of Markov Chain, Princeton University Press, 1994</p>
+<p>MATH7028　非线性方程组解法<br>Iterative Solution of Nonlinear Equations<br>开课院系：数学研究所 　 　任课教师：苏仰锋副教授<br>开课学期：第三 学分：3 周学时：3 总学时：54<br>课程性质：硕士专业选修课 适用专业：计算数学<br>本课程的教学目的<br>掌握非线性方程的迭代解法及基本的非线性优化技术。<br>教学内容及基本要求<br>1、非线性方程组解的存在性及一般性质；2、求解非线性方程组的分裂方法；3、求解非线性方程组的牛顿法及其变型；4、非线性优化的一般方法；5、非线性优化的共轭梯度法。<br>考核方式及要求<br>考试。要求学生能熟练使用Matlab进行演算。<br>学习本课程的前期课程要求<br>多变量微分、求解线性方程组的数值方法。<br>教材及主要参考书目、文献与资料</p>
+<p>MATH7029　算法复杂性分析<br>Algorithm and Complexity<br>开课院系：数学研究所 　 　任课教师：程晋教授<br>开课学期：第三 学分：3 周学时：3 总学时：54<br>课程性质：硕士专业选修课 适用专业：计算数学<br>本课程的教学目的<br>了解算法分析的基本概念和思想，掌握算法设计和实现的技巧。<br>教学内容及基本要求<br>1、基本概念和数据结构；2、通信复杂性；3、递归和devide-conquer技巧；4、贪婪算法；5、随机算法；6、逼近算法；7、NP复杂问题；8、快速算法。<br>考核方式及要求<br>考试。理论考试。<br>学习本课程的前期课程要求<br>数学分析、数据结构。<br>教材及主要参考书目、文献与资料<br>M. Alsuwaiyel, Algorithm Design Techniques and Analysis, World Scientific, 1999</p>
+<p>MATH7063　非线性控制系统<br>Nonlinear Control Systems<br>开课院系：数学研究所 　　<br>任课教师：潘立平副教授、周渊副教授、吴汉忠副教授、楼红卫副教授<br>开课学期：第四 学分：3 周学时：3 总学时：54<br>课程性质：硕士专业选修课 适用专业：运筹学与控制论<br>本课程的教学目的<br>了解非线性系统理论的实际背景，掌握非线性系统理论最基础的知识，为今后在实际问题中运用非线性系统理论的方法和结果及进行相关的科学研究打下坚实的基础。<br>教学内容及基本要求<br>1、非线性常微分方程的基本理论：包括Cauchy问题解和广义解的应用背景，以及它们的存在性，唯一性和连续依赖性等；2、边值问题和周期解：包括解的存在性，唯一性；介绍几种基本方法；3、稳定性理论：主要介绍Lyapunov第二方法及自动调节系统的绝对稳定性；4、镇定性：介绍非线性控制系统的反馈镇定问题，以及Lyapunov方法。本课程要求学生了解非线性系统理论的实际背景，掌握非线性系统理论最基础的知识和基本方法。<br>考核方式及要求<br>考试。笔试。<br>学习本课程的前期课程要求<br>常微分方程、实变函数、控制理论基础。<br>教材及主要参考书目、文献与资料<br>教材自编。</p>
+<p>MATH7064　分布参数系统理论<br>Theory of Distributed Parameter Systems<br>开课院系：数学研究所 　 　任课教师：潘立平、吴汉忠、楼红卫副教授<br>开课学期：第三 学分：3 周学时：3 总学时：54<br>课程性质：硕士专业选修课 适用专业：运筹学与控制论<br>本课程的教学目的<br>通过这门课程的学习，了解分布参数系统的实际背景来源和形成过程，掌握分布参数系统控制理论最基础的知识，为今后无限维系统控制理论的进一步学习及进行相关科学研究打下坚实的基础。<br>教学内容及基本要求<br>1、准备知识：介绍泛函分析的基本知识，线性算子半群的基本理论，以及无限维发展方程的基本理论。2、分布参数系统的实际背景和形成过程：着重介绍线性时滞微分方程的集中控制，线性抛物型和线性双曲型偏微分方程的内部控制或者分布控制；如何用无限维系统来描述这三种控制系统，阐明它们与常微分方程控制系统的区别以及三种不同控制系统的相互区别；讲述半线性抛物型和双曲型偏微分方程内部控制的数学描述。3、线性系统理论：着重介绍线性控制系统的能控性、能稳性、能观性和能检性以及它们间相互关系，阐明它们与有限维情形的区别。4、线性二次最优控制理论：讲述如何用动态规划方法推导出Riccati方程，和用Riccati方程算子解给出最优控制的综合表示。本课程要求学生了解分布参数控制系统的实际背景来源和形成过程，掌握分布参数系统控制理论最基础的知识，理解与有限维控制系统理论的区别。<br>考核方式及要求<br>考试。笔试。<br>学习本课程的前期课程要求<br>实变函数与泛函分析、控制理论基础、数理方程。<br>教材及主要参考书目、文献与资料<br>教材自编<br>X. Li and J. Yong, Optimal Control Theory for Infinite-Dimensional Systems, Birkhauser, Boston, 1995</p>
+<p>MATH7071　最优化理论专题<br>Study of Optimization Theory<br>开课院系：管理学院 　　<br>任课教师：朱道立教授、徐以汎副教授、叶耀华副教授、殷志文副教授<br>开课学期：第三或四 学分：3 周学时：3 总学时：54<br>课程性质：硕士专业选修课 适用专业：运筹学与控制论<br>本课程的教学目的<br>通过本课程的学习，了解某些研究前沿，帮助学生确立今后的研究方向。<br>教学内容及基本要求<br>主要内容包括：变分和均衡理论；网络最优化；运输网络平衡分析、路线问题和网络设计；排序理论；计算复杂性分析等。<br>考核方式及要求<br>考试。论文或综述报告。<br>学习本课程的前期课程要求<br>线性最优化、数学分析。<br>教材及主要参考书目、文献与资料<br>Mathematical Programming；Operations Research<br>P. Chretierme, Scheduling Theory and its Applications, John Wiley &amp; Sons, 1995<br>Y. Sheffi, Urban Transportation Networks: Equilibrium Analysis with Mathematical Programming Methods</p>
+<p>MATH7073　运筹学应用专题<br>Applications of Operations Research<br>开课院系：管理学院 　　<br>任课教师：朱道立教授、徐以汎副教授、叶耀华副教授、殷志文副教授<br>开课学期：第三或四 学分：3 周学时：3 总学时：54<br>课程性质：硕士专业选修课 适用专业：运筹学与控制论<br>本课程的教学目的<br>了解和掌握运筹学的应用研究前沿。<br>教学内容及基本要求<br>本课程主要教学内容是介绍在经济、金融和管理等方面的近期应用研究及其理论和方法。<br>考核方式及要求<br>考试。论文或综述报告。<br>学习本课程的前期课程要求<br>运筹学、数学规划。<br>教材及主要参考书目、文献与资料<br>Operations Research和Management Science</p>
+<p>MATH7074　运筹学方法讨论班<br>Seminar on Methods of Operations Research<br>开课院系：管理学院 　　<br>任课教师：朱道立教授、徐以汎副教授、叶耀华副教授、殷志文副教授<br>开课学期：第三至五 学分：3 周学时：3 总学时：54<br>课程性质：硕士专业选修课 适用专业：运筹学与控制论<br>本课程的教学目的<br>通过本课程的学习，了解和掌握运筹学方法最新研究，并探讨进一步的深入和推广研究。<br>教学内容及基本要求<br>主要内容有：运输管理模型；城市交通网络分析；运输网络设计；配送路线和调度；计划问题和方法、定价问题和方法，随即需求的库存决策等。<br>考核方式及要求<br>考查。<br>学习本课程的前期课程要求<br>教学规划。<br>教材及主要参考书目、文献与资料<br>Operations Research和Management Science</p>
+<p>MATH7077　概形与层<br>Schemes and Sheaves<br>开课院系：数学研究所 　　 任课教师：杨劲根教授<br>开课学期：第三或四 学分：3 周学时：3 总学时：54<br>课程性质：硕士专业选修课 适用专业：基础数学<br>本课程的教学目的<br>在了解经典代数的基础上进一步学习现代代数几何中的主要概念和方法，此课程是“MATH6021代数几何”的后续课程。<br>教学内容及基本要求<br>本课程包含概形及凝聚层的定义、性质及对概形研究的上同调方法。使学生对现代代数几何的基本概念和方法有初步了解。<br>考核方式及要求<br>考查。要求能完成1/3左右的习题。<br>学习本课程的前期课程要求<br>交换代数、同调代数、点集拓扑。<br>教材及主要参考书目、文献与资料<br>R. Hartshorne, Algebraic Geometry, GTM, Springer-Verlag<br>Eisenbud, Harris, Geometry of Schemes, GTM, Springer-Verlag</p>
+<p>MATH7078　非阿基米德空间上的随机分析<br>Stochastic Analysis on Non-Archimedean Space<br>开课院系：数学研究所 　　 任课教师：赵学雷教授<br>开课学期：第三或四 学分：3 周学时：3 总学时：54<br>课程性质：硕士专业选修课 适用专业：概率论与数理统计<br>本课程的教学目的<br>掌握空间距离结构的不同对随机分析不同性质的影响，学习非阿基米德空间上的随机过程、随机积分理论。<br>教学内容及基本要求<br>要求学生系统的学习如下内容：1、非阿基米德空间具有超度量性质，这个性质对随机过程、随机分析有较大的影响；2、一些随机过程的构造与性质；3、Lévy过程及其性质；4、随机积分与随机微分方程。<br>考核方式及要求<br>考试。该理论的概念与性质。<br>学习本课程的前期课程要求<br>随机过程、测度论。<br>教材及主要参考书目、文献与资料<br>Sergio Albeveriv, Xuelei Zhao, Stochastic Analysis on P-adics, in preparation</p>
+<p>MATH8001　极值拟共形映射理论<br>Theory of Extremal Quasiconformal Mappings<br>开课院系：数学研究所 任课教师：陈纪修教授<br>开课学期：第一 学分：3 周学时：3 总学时：54<br>课程性质：博士学位专业课 适用专业：基础数学<br>本课程的教学目的<br>极值拟共形映射理论是拟共形映射理论的一个重要而活跃的研究方向，它的研究进展不仅本身具有重要的理论意义与学术价值，而且在许多相关学科中具有重要的应用。本课程通过讲授极值拟共形映射的基本理论与方法，它在发展过程中的一些重要成果与进展，以及它在相关学科中的重要的应用，尽快将学生引入研究的前沿。<br>教学内容及基本要求<br>极值拟共形映射与泰希缪勒映射；主要不等式；哈密尔顿条件——极值拟共形映射的充分必要条件；标架映照准则；唯一极值拟共形映射的充分性判据；本质边界点及边界伸缩商；拟共形同胚及其边界对应；拟共形形变的极值问题；齐格蒙特函数族；唯一极值拟共形映射与唯一极值无限小拟共形映射。<br>考核方式及要求<br>考试。要求学生掌握极值拟共形映射的基本理论，了解极值拟共形映射理论研究的最新进展，并能应用极值拟共形映射理论研究的基本方法开展初步的研究。<br>学习本课程的前期课程要求<br>硕士生“平面拟共形映射”课程。<br>教材及主要参考书目、文献与资料<br>E. Reich and K. Strebel, Extremal Quasiconformal Mappings with Given Boundary Values, Contributions to Analysis, Academic Press, New York, 1974<br>V. Bozin et al, Unique Extremality, J. D’Analyse Math. 75, 1998</p>
+<p>MATH8002 泰希缪勒空间理论<br>Theory of Teichmuller Spaces<br>开课院系：数学研究所 任课教师：陈纪修教授<br>开课学期：第二 学分：3 周学时：3 总学时：54<br>课程性质：博士学位专业课 适用专业：基础数学<br>本课程的教学目的<br>泰希缪勒空间是复分析研究方向的一门新的分支，是受到国际上广泛关注与重视的研究领域。泰希缪勒空间理论是在极值拟共形映射理论的发展中产生，它的研究综合了代数，几何，拓扑，分析等许多学科的理论与方法，而它的发展又在复动力系统，理论物理等学科中有重要应用。本课程讲述泰希缪勒空间的基本理论，为学生进入泰希缪勒空间理论的研究领域打基础。<br>教学内容及基本要求<br>黎曼曲面上的拟共形映射；紧黎曼曲面上的泰希缪勒定理；有限型黎曼曲面上的泰希缪勒定理；黎曼曲面的模问题与泰希缪勒空间；泰希缪勒度量；万有泰希缪勒空间；解析函数的单叶性判据与拟共形延拓；福克斯群的泰希缪勒空间；贝尔斯有界嵌入定理。<br>考核方式及要求<br>考试。掌握泰希缪勒空间理论的基本内容与基本方法，了解泰希缪勒空间理论的重要应用。<br>学习本课程的前期课程要求<br>硕士生“平面拟共形映射”课程与博士生“极值拟共形映射理论”课程。<br>教材及主要参考书目、文献与资料<br>李忠，《拟共形映射及其在黎曼曲面论中的应用》，科学出版社，1988<br>F. P. Gardiner and N. Lakic, Quasiconformal Teichmuller Theory, AMS Providence R. I., 2000</p>
+<p>MATH8007 双曲型守恒律方程组<br>Hyperbolic System of Conservation Laws<br>开课院系：数学研究所 任课教师：陈恕行教授<br>开课学期：第一或二 学分：3 周学时：3 总学时：54<br>课程性质：博士学位专业课 适用专业：基础数学、应用数学<br>本课程的教学目的<br>双曲型守恒律方程组是一类重要的非线形偏微分方程，它在物理、力学中有广泛的应用，本课程将对这类方程组的基本理论作一个全面而系统的介绍。<br>教学内容及基本要求<br>守恒律方程组的物理、力学背景；双曲型方程组的基本概念；激波、疏散波接触间断；黎曼问题的求解；双曲型方程组局部解的存在性；双曲型方程组BV整体解的存在性；Glimm格式；双曲型方程组L∞整体解的存在性，补偿紧激法。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>数学物理方程，偏微分方程的近代方法。<br>教材及主要参考书目、文献与资料<br>J. Smoller, Shock Waves and Reaction-Diffusion Equations<br>Courant-Friedricks, Supersonic Flow and Shock Waves</p>
+<p>MATH8009 指标理论<br>Index Theory<br>开课院系：数学研究所 任课教师：陈晓漫教授等<br>开课学期：第一 学分：3 周学时：3 总学时：54<br>课程性质：博士学位专业课 适用专业：基础数学<br>本课程的教学目的<br>要求学生掌握Atiyah-Singor指标定理的证明思想与方法。<br>教学内容及基本要求<br>椭圆型拟微分算子的性质，Dirac算子，局部化；Atiyah-Singor指标定理的证明。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>要求学生有代数拓扑的基础。<br>教材及主要参考书目、文献与资料</p>
+<p>MATH8010 算子代数K-理论<br>K-Theory for Operator Algebras<br>开课院系：数学研究所 任课教师：陈晓漫教授等<br>开课学期：第一 学分：3 周学时：3 总学时：54<br>课程性质：博士学位专业课 适用专业：基础数学<br>本课程的教学目的<br>要求学生掌握拓扑K-理论与C<em>-代数K-理论。<br>教学内容及基本要求<br>拓扑空间的K-理论，Bott周期性定理，Thom同构；C</em>-代数的K-理论，Bott周期性定理，短正合列；BDF理论。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>要求学生具有C*-代数的知识。<br>教材及主要参考书目、文献与资料</p>
+<p>MATH8013 可积系统和孤立子<br>Integrable Systems and Solitons<br>开课院系：数学研究所 任课教师：谷超豪教授<br>开课学期：第一 学分：3 周学时：3 总学时：54<br>课程性质：博士学位专业课 适用专业：基础数学<br>本课程的教学目的<br>掌握可积系统和孤立子理论的现代进展。<br>教学内容及基本要求<br>高维可积系统及其精确求解方法，孤立子的几何理论，可积系统和孤立子理论在物理、力学中的应用，哈密顿系统的可积性等。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>硕士生课程“孤立子理论”。<br>教材及主要参考书目、文献与资料<br>谷超豪等，《孤立子理论及其应用》、《孤立子理论中的达布变换及其几何应用》<br>Faddeev and Takhtajan, Hamiltonian Methods in the Theory of Solitons</p>
+<p>MATH8014 复解析动力系统<br>Complex Analytic Dynamical Systems<br>开课院系：数学研究所 任课教师：邱维元教授<br>开课学期：第一 学分：3 周学时：3 总学时：54<br>课程性质：博士学位专业课 适用专业：基础数学<br>本课程的教学目的<br>复解析动力系统是现代数学研究的主流方向之一，正在飞速发展，并与拟共形映射、Teichmuller空间理论、Klein群理论、分形几何、一维实动力系统、遍历理论，计算复杂性等数学领域有密切联系和相互影响。本课程将介绍复解析动力系统的基本理论，适合进行复解析动力系统及相关领域研究的学生修读。<br>教学内容及基本要求<br>Riemann曲面上的双曲度量，局部周期点定理，双曲Riemann曲面上的解析动力系统，有理函数的Fatou-Julia理论，Fatou集上的动力学性质，最终周期性定理和周期分支的分类定理，Julia集的测度和维数，多项式的填充Julia集，等势曲线和外射线，多项式的Julia集的局部连通性，二次多项式的Julia集和Mandelbrot集。<br>考核方式及要求<br>考试。要求学生掌握复解析动力系统的基本理论与基本方法，为进行复解析动力系统理论的研究打好基础。<br>学习本课程的前期课程要求<br>复分析、拓扑学基础、Riemann曲面、拟共形映射。<br>教材及主要参考书目、文献与资料<br>任福尧，《复解析动力系统》，复旦大学出版社，1997<br>J. Milnor, Dynamics in One Complex Variable-Introductory Lectures, Vieweg, 2nd edition, 2000<br>L. Carleson and T. Gamelin, Complex Dynamics, Springer-Verlag, 1993<br>N. Steinmetz, Rational Iteration: Complex Analytic Dynamical System, de Gruyter, 1993<br>A. F. Beardon, Iteration of Rational Functions, Graduate Texts in Mathematics, Springer, 1991</p>
+<p>MATH8019 线性系统的矩阵计算<br>Matrix Lomputation Arising from Linear Systems<br>开课院系：数学研究所 任课教师：程晋教授<br>开课学期：第二 学分：3 周学时：3 总学时：54<br>课程性质：博士学位专业课 适用专业：计算数学<br>本课程的教学目的<br>熟悉线性系统中的数值算法及其进展，学习使用MATCAB的控制系统工具包。<br>教学内容及基本要求<br>1、信号与系统；2、可控、可观测的判断；3、极点配置算法；4、传递函数的实现（最小实现）；5、正实传递矩阵和有理扩张；6、平衡分解及其算法；7、Hamilton系统和代数Riccati方程的数值解。<br>考核方式及要求<br>考试。理论考试80分，上机考试20分。<br>学习本课程的前期课程要求<br>数学分析、线性代数、矩阵计算、线性系统。<br>教材及主要参考书目、文献与资料<br>T. Kailath, Linear Systems, Prentice-Hall, 1980<br>W. J. Rugh, Linear System Theory, Prentice-Hall, 1993</p>
+<p>MATH8020 区域分解预处理<br>Domain Decomposition<br>开课院系：数学研究所 任课教师：陈文斌副教授<br>开课学期：第一 学分：3 周学时：3 总学时：54<br>课程性质：博士学位专业课 适用专业：计算数学、应用数学<br>本课程的教学目的<br>了解各种区域分解算法的基本思想，在理论上能做基本分析，并能自己编写区域分解程序。<br>教学内容及基本要求<br>内容：1、单水平算法；2、两水平算法；3、多水平算法；4、子结构分法；5、收敛性理论；6、区域分解法的软件和编程。要求：1、掌握区域分解算法的基本思想，并能用软件实现；2、通读经典的论文，并要求对两水平算法有深入理解。<br>考核方式及要求<br>考试。考试加机试。笔试：掌握区域分解的理论和分析；机试：求解偏微分方程的区域分解算法。<br>学习本课程的前期课程要求<br>有限元数值分析、矩阵计算、Sobolev空间。<br>教材及主要参考书目、文献与资料<br>B. F. Smith, P. E. Bjrstad, Domain Decomposition, W. D. Gropp, 1996<br>吕涛等，《区域分解算法》</p>
+<p>MATH8021　多重网格方法<br>Multigrid Methods<br>开课院系：数学研究所 任课教师：陈文斌副教授<br>开课学期：第二 学分：3 周学时：3 总学时：54<br>课程性质：博士学位专业课 适用专业：计算数学、应用数学<br>本课程的教学目的<br>深入掌握多重网格的理论和计算。<br>教学内容及基本要求<br>基本内容：基本迭代方法，多重网格算法，Fouvier分析，收敛性分析，代数多重网格介绍，自适应多重网格算法，多重网格的应用。基本要求：1、能用多重网格的算法快速求解偏微分方程；2、掌握多重网格的理论和收敛性分析。<br>考核方式及要求<br>考试。考试加机试，笔试：对多重网格算法给出完整理论分析；机试：对椭圆型方程，构建多重网格算法。<br>学习本课程的前期课程要求<br>Sobolev空间、矩阵计算、有限元方法。<br>教材及主要参考书目、文献与资料<br>J. H. Bramble, Multigrid Methods; K. Stuben, P. Oswald, A. Brandt, Multigrid; 曹志浩，《多格子方法》。</p>
+<p>MATH8022　不适定问题的解法研究<br>Solutions of Ill–posed Problems<br>开课院系：数学研究所<br>任课教师：张万国副教授、魏益民副教授、程晋教授<br>开课学期：第二 学分：3 周学时：3 总学时：54<br>课程性质：博士学位专业课 适用专业：计算数学、应用数学<br>本课程的教学目的<br>通过本课程的教学，使得参加课程的学生能够对不适定问题有一定程度的了解，掌握求解不适定问题的基本方法。特别是较好地掌握如何使用Tikhonov正则化方法求解数学物理方程的反问题。<br>教学内容及基本要求<br>本课程将讲授以下几方面的内容：1、不适定问题的基础；2、不适定问题的若干例子；3、求解不适定问题的基本方法，主要讲授Tikhonov正则化方法；4、不适定问题的算法，特别强调在计算机上实现基本的算法；5、国内外最新动态。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>学习本科生和研究生阶段的数理方程、泛函分析及数值分析等有关课程。<br>教材及主要参考书目、文献与资料<br>A. N. Tikhonov et al,《不适定问题的解法》，1997<br>H. W. Engl et al, Regularization of Inverse Problems, 1998</p>
+<p>MATH8025　脉冲动力系统<br>Impulsive Dynamical Systems<br>开课院系：数学研究所 任课教师：阮炯教授<br>开课学期：第一 学分：3 周学时：3 总学时：54<br>课程性质：博士学位专业课 适用专业：基础数学、应用数学<br>本课程的教学目的<br>对脉冲动力系统的背景、解的理论、稳定性、定性、周期混沌性质有较深入的了解。<br>教学内容及基本要求<br>1、脉冲动力系统的应用背景介绍；2、脉冲动力系统初值问题解的基本性质与理论；3、脉冲动力系统的稳定性与定性理论初步；4、脉冲动力系统的周期解与混沌解。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>任何数学系的博士生。<br>教材及主要参考书目、文献与资料</p>
+<p>MATH8032 分布参数系统最优控制理论<br>Optimal Control Theory for Distributed Parameter Systems<br>开课院系：数学研究所<br>任课教师：雍炯敏教授、潘立平副教授、吴汉忠副教授、楼红卫副教授<br>开课学期：第二 学分：3 周学时：3 总学时：54<br>课程性质：博士学位专业课 适用专业：运筹学与控制论<br>本课程的教学目的<br>了解分布参数系统最优控制理论的形成过程和无界控制的实际背景来源，掌握无限维最优控制理论中的三个里程碑工作，为展开进一步的科学研究工作打下坚实的基础。<br>教学内容及基本要求<br>1、准备知识：回顾有限维最优控制理论；介绍椭圆型偏微分方程的基本理论，介绍线性抛物型和双曲型偏微分方程的几种边界控制和点态控制，以及半线性情形的数学描述。2、最大值原理：着重介绍半线性发展系统具有状态约束的最优控制问题，介绍有限余维数的概念，讲解该问题的Pontryagin最大值原理，及其与有限维情形的根本区别；介绍各种方程的最大值原理的研究现状。3、动态规划方法：着重介绍Bellman的最优性原理，及动态规划方程；介绍动态规划方法与最大值原理的联系；介绍目前的发展现状。4、线性二次最优控制理论：讲述抛物型方程带边界控制的LQ理论；介绍具无界控制的LQ理论的发展现状。5、最优控制的存在性：介绍发展现状。本课程要求学生了解分布参数控制系统的实际背景，掌握分布参数控制系统的最优控制理论及其发展现状，理解与有限维控制系统理论的区别。<br>考核方式及要求<br>考试。笔试。<br>学习本课程的前期课程要求<br>实变函数与泛函分析、控制理论基础、最优控制理论、分布参数系统理论。<br>教材及主要参考书目、文献与资料<br>教材自编。<br>X. Li and J. Yong, Optimal Control Theory for Infinite-Dimensional Systems, Birkhauser, 1995</p>
+<p>MATH8034 微分对策理论<br>Differential Game Theory<br>开课院系：数学研究所 任课教师：雍炯敏教授、吴汉忠、楼红卫副教授<br>开课学期：第一 学分：3 周学时：3 总学时：54<br>课程性质：博士学位专业课 适用专业：运筹学与控制论<br>本课程的教学目的<br>使学生了解对策理论的基本概念，主要思想，和该学科遇到的独特的困难和研究方法，建立起正确的观念。<br>教学内容及基本要求<br>介绍微分对策理论的控制理论产生的背景，其研究对象、研究的基本问题等。具体内容包括：1、对策论简介；2、躲避、追捕微分对策理论；3、二人零和微分对策及Isaacs方程的粘性解；4、二人非零和微分对策简介；5、线性二次微分对策及Riccati方程。<br>考核方式及要求<br>考试。笔试。<br>学习本课程的前期课程要求<br>常微分方程、控制理论基础、最优控制理论。<br>教材及主要参考书目、文献与资料<br>教材自编。<br>J. Von Neumann and O. Morgenstern, The theory of Games and Economic Behaviour, Princeton University Press, 1944<br>Gibsons.R, A Primer in Game Theory, MIT Press, 1992<br>雍炯敏，《动态规划方法与Hamilton-Jacobi-Bellman方程》，上海科技出版社，1992</p>
+<p>MATH8035 数学金融学<br>Mathematical Finance<br>开课院系：数学研究所<br>任课教师：雍炯敏教授、汤善健副教授、刘道百讲师<br>开课学期：第二 学分：3 周学时：3 总学时：54<br>课程性质：博士学位专业课 适用专业：运筹学与控制论<br>本课程的教学目的<br>了解和掌握金融市场上金融衍生产品的定价和投资问题中的基础数学理论，为将来在数学金融领域进行研究做准备。<br>教学内容及基本要求<br>第一部分、离散金融市场：1、套利定价；2、鞅测度；3、资产定价的基本定理；4、完备市场和鞅表示；5、最优停时和美式期权。第二部、连续金融市场：1、预备知识（连续时间随机过程，鞅，随机积分，伊藤公式，随机微分方程）；2、欧式期权与Black—Scholes 公式；3、美式期权；4、最优消费和投资。<br>考核方式及要求<br>考试。笔试。<br>学习本课程的前期课程要求<br>实变函数与泛函分析、控制理论基础、最优控制理论、分布参数系统理论。<br>教材及主要参考书目、文献与资料<br>雍炯敏、刘道百，《数学金融学》，上海人民出版社，2003<br>I. Karatzas, S. E. Shreve, Methods of Mathematical Finance, Springer, 1998</p>
+<p>MATH8038 神经网络动力系统<br>Dynamical Systems of Neuron Networks<br>开课院系：数学研究所 任课教师：阮炯教授<br>开课学期：第二 学分：3 周学时：3 总学时：54<br>课程性质：博士学位专业课 适用专业：应用数学<br>本课程的教学目的<br>对于生物及人工神经网络中的动力学问题理论、模型方法及应用有较深入的了解。<br>教学内容及基本要求<br>1、生物神经网络的背景，人工神经网络的背景及发展历史；2、动力系统的一般研究方法介绍；3、BP网络及进一步推广与应用；4、Hopfield网络及进一步推广与应用；5、混沌神经网络的类型、应用；6、有延迟的及有脉冲的神经网络的简单介绍。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>任何数学系的博士生。<br>教材及主要参考书目、文献与资料</p>
+<p>MATH8041 KK-理论<br>KK-Theory for Operator Algebras<br>开课院系：数学研究所 任课教师：陈晓漫教授等<br>开课学期：第二 学分：3 周学时：3 总学时：54<br>课程性质：博士专业选修课 适用专业：基础数学<br>本课程的教学目的<br>要求掌握Kasparov、KK-群的性质以及Kasparov乘积应用。<br>教学内容及基本要求<br>Hilbezt双模、联络，KK-群的定义，同伦不变性和Kasparov乘积，以及它与K-群之间的关系。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>要求学生具有指标理论和算子代数K-理论的知识。<br>教材及主要参考书目、文献与资料</p>
+<p>MATH8043　几何Hilbert模与Toeplitz分析<br>Geometric Hilbert Modules and Toeplitz Analysis<br>开课院系：数学研究所 任课教师：郭坤宇教授<br>开课学期：第三 学分：3 周学时：3 总学时：54<br>课程性质：博士专业选修课 适用专业：基础数学<br>本课程的教学目的<br>使学生了解并且掌握几何算子论，几何Hilbert模及Toeplitz分析的现代内容及与几何、拓扑之间的联系。<br>教学内容及基本要求<br>1、函数代数上Hilbert模的基本内容，Banach代数及算子代数上Hilbert模的基本内容，以及与函数论、算子论，算子代数之间的关系。2、Hilbert模的曲率以欧拉特征的计算。3、Toeplitz代数，Hankel代数及相关的指标理论。<br>考核方式及要求<br>考查。<br>学习本课程的前期课程要求<br>掌握现代泛函分析的基本内容，熟悉算子论、算子代数以及多复分析的基本内容。<br>教材及主要参考书目、文献与资料<br>Xiaoman Chen ＆ Kunyu Guo，Analytic Hilbert Modules, 将由∏-Research Notes of Math出版<br>W. Rudin, Function Theory on the Unit Ball of Cn; Springer-Verlag, New York, 1980</p>
+<p>MATH8046 偏微分方程的奇性分析<br>Analysis of Singularifies for Partial Differential Equations<br>开课院系：数学研究所 任课教师：陈恕行教授<br>开课学期：第二 学分：3 周学时：3 总学时：54<br>课程性质：博士专业选修课 适用专业：基础数学<br>本课程的教学目的<br>偏微分方程解的存在性、唯一性、正则性为偏微分方程理论中三个最基本的问题。本课程着重研究解的正则性问题，以微局部分析为工具，介绍了研究偏微分方程解的奇性的主要方法与结果。<br>教学内容及基本要求<br>1、偏微分方程奇性分析研究的重要性；2、线性方程的奇性分析；3、半线性方程的奇性分析；4、二次微局部分析与三叉干扰；5、完全非线性方程的奇性传播定理；6、非线性方程强奇性的传播。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>现代偏微分方程、拟微分算子、泛函分析。<br>教材及主要参考书目、文献与资料<br>陈恕行，《偏微分方程的奇性分析》；齐民友，《线性偏微分算子引论》。</p>
+<p>MATH8047　现代微分算子理论<br>Theory of Modern Differential Operators<br>开课院系：数学研究所 任课教师：陈恕行教授<br>开课学期：第三 学分：3 周学时：3 总学时：54<br>课程性质：博士专业选修课 适用专业：基础数学<br>本课程的教学目的<br>现代微分算子理论的产生与发展是二十世纪下半叶中一大数学成就。本课程将对其主要内容：拟微分算子、傅里叶积分算子、仿微分算子作一系统的介绍。<br>教学内容及基本要求<br>拟微分算子的性质与运算；傅里叶积分算子的性质与运算；仿微分算子的性质及其运算；微局部分析在偏微分方程理论中的应用。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>现代偏微分方程、泛函分析。<br>教材及主要参考书目、文献与资料<br>仇庆久、陈恕行等，《傅里叶积分算子及其应用》，科学出版社，1985<br>陈恕行、仇庆久、李戍章，《仿微分算子引论》，科学出版社，1990<br>陈恕行，《拟微分算子》，高等教育出版社，1995<br>齐民友，《线性偏微分算子引论》，科学出版社，1984</p>
+<p>MATH8052　高等矩阵计算<br>Advanced Matrix Computation<br>开课院系：数学研究所 任课教师：苏仰锋副教授<br>开课学期：第三 学分：3 周学时：3 总学时：54<br>课程性质：博士专业选修课 适用专业：计算数学<br>本课程的教学目的<br>矩阵计算在各学科中的应用，是矩阵计算课程的补充。<br>教学内容及基本要求<br>1、随机矩阵计算；2、矩阵方程的求解；3、线路分析中的矩阵计算；4、统计计算。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>矩阵计算。<br>教材及主要参考书目、文献与资料</p>
+<p>MATH8053 新型算法<br>Multigrid Method<br>开课院系：数学研究所 任课教师：程晋教授<br>开课学期：第三 学分：3 周学时：3 总学时：54<br>课程性质：博士专业选修课 适用专业：计算数学<br>本课程的教学目的<br>使计算数学专业的博士生掌握新型算法的理论、性质和算法。<br>教学内容及基本要求<br>包括：基本算法；多格子思想；模型问题分析；多格子收敛理论；代数和变分；多格子方法和多格子方法的实施。基本要求：掌握多格子方法的基本思想、基本算法和收敛理论。并能应用于模型问题分析。<br>考核方式及要求<br>考试。熟练掌握多格子方法的基本算法、理论和性质。<br>学习本课程的前期课程要求<br>数值线性代数、微分方程数值解。<br>教材及主要参考书目、文献与资料<br>曹志浩，《多格子方法》，复旦大学出版社，1989<br>W. Hackbusch,《多重网格方法》，科学出版社，1988</p>
+<p>MATH8054 数值分析中的经典论文导读<br>Classic Papers in Numerical Analysis<br>开课院系：数学研究所 任课教师：陈文斌副教授<br>开课学期：第三 学分：3 周学时：3 总学时：54<br>课程性质：博士专业选修课 适用专业：计算数学<br>本课程的教学目的<br>介绍科学计算方法的基本原理、基本方法和基本思想，阅读经典的论文，拓宽知识面。<br>教学内容及基本要求<br>内容：1、浮点、数IEEE标准和计算精度；2、快速FFT快接；3、差分方法；4、有限元方法；5、谱方法；6、B-样条；7、多重网格算法；8、QR分解；9、ILN分解；10、CG方法；11、Powell方法；12、Mutipole方法；13、内点法；14、Order star和ODE；15、刚性和ODE。要求：1、对经典的计算方法的来源有清楚的认识；2、对其发展过程作出总结。<br>考核方式及要求<br>考查。用论文的形式（或读书报告形式）递交。<br>学习本课程的前期课程要求<br>教材及主要参考书目、文献与资料<br>经典文献。</p>
+<p>MATH8055 信息科学中的积分方程方法<br>Integral Equation Methods in Information Sciences<br>开课院系：数学研究所 任课教师：张万国副教授、程晋教授<br>开课学期：第三 学分：3 周学时：3 总学时：54<br>课程性质：博士专业选修课 适用专业：计算数学<br>本课程的教学目的<br>通过本课程的教学，使得博士研究生能够了解一些归结为积分方程的实际问题的背景，初步掌握信息科学中所用到的积分方程的研究方法。<br>教学内容及基本要求<br>本课程将讲授以下几方面的内容：可归结为积分方程的有关实际问题，包括散射理论中的有关问题等；积分方程的基本方法；积分方程的有关数值解法，特别强调在计算机上的算法实现；不适定问题初步；目前国内外的最新研究成果介绍。<br>考核方式及要求<br>考试。<br>学习本课程的前期课程要求<br>学过本科生和研究生阶段的数理方程、泛函分析及数值分析等有关课程。<br>教材及主要参考书目、文献与资料<br>陈传璋、侯宗义、李明忠，《积分方程及其应用》，上海科技出版社<br>有关论文及自编资料。</p>
+<p>MATH8073 局部域上的随机分析<br>Stochastic Analysis On Local Field<br>开课院系：数学研究所 任课教师：赵学雷教授<br>开课学期：第三 学分：3 周学时：3 总学时：54<br>课程性质：博士专业选修课 适用专业：概率论与数理统计<br>本课程的教学目的<br>局部域、局部域上的随机分析。<br>教学内容及基本要求<br>局部域是一个重要的标记空间，在实际中有很多例子。本课要求学生在掌握局部域的空间及代数结构的前提下，系统学习局部域上的随机过程、随机积分。深入了解局部域上的随机分析理论，研究对应的测度值分枝过程理论，学习在理论物理、数理金融中的应用。<br>考核方式及要求<br>考试。深入掌握有关知识。<br>学习本课程的前期课程要求<br>随机过程。<br>教材及主要参考书目、文献与资料<br>Sergio Albeverio, Xue Lei Zhao, Stochastic Analysis On P-cadics, in Preparation, etc.</p>
+<p>MATH8075 数学金融学选讲<br>Lectures on Mathematical Finance<br>开课院系：数学研究所<br>任课教师：雍炯敏教授、汤善健副教授、刘道百讲师<br>开课学期：第三 学分：3 周学时：3 总学时：54<br>课程性质：博士专业选修课 适用专业：运筹学与控制论<br>本课程的教学目的<br>了解金融市场上关于金融衍生产品的定价和投资问题的高深或最新理论成果以及一些重要的前沿问题，为在数学金融学领域进行研究做前期准备。<br>教学内容及基本要求<br>1、完备市场中的未定权益定价；2、个人最优消费和投资；3、完备市场中的一般均衡问题；4、不完备市场中的未定权益定价；5、不完备市场中的均值-方差定价；6、证券组合策略受限制的最优消费和投资。<br>考核方式及要求<br>考试。笔试。<br>学习本课程的前期课程要求<br>实变函数论、现代概率论、随机分析、数学金融学、控制理论基础、最优控制理论。<br>教材及主要参考书目、文献与资料<br>教材自编。<br>I. Karatzas, S. E. Shreve, Methods of Mathematical Finance, Springer, 1998<br>雍炯敏、刘道百，《数学金融学》，高等教育出版社</p>
+<p>Copyright ? |2012 复旦大学数学科学学院版权所有 沪ICP备042465<br>电话：+86(21)65642341 传真：+86(21)65646073  </p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
